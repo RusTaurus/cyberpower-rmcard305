@@ -1,0 +1,38 @@
+Firmware Upgrade
+By upgrading the Firmware, you can obtain both the new features and updates/improvements to existing functionality.
+There are two files to update in order to upgrade the firmware version:
+-	cpsrm2scfw_XXX.bin
+-	cpsrm2scdata_XXX.bin
+	Note that the XXX is not part of the file name but is where the version number in the filename is given.
+       Use the following steps to upgrade the firmware.   
+
+1.	Download the latest Firmware from cyberpowersystems.com. 
+2.	Extract the file to C:\
+3.	Open a command prompt window and navigate to C:\
+4.	Login to the CyberPower Remote Management Card with FTP command, type
+-	ftp
+-	Upon entering ftp mode, the command prompt will display ftp> as shown below instead of C:\
+-	ftp> open
+-	To [ip] [port] ; EX: To 192.168.22.126 21 (21 is the default ftp port)
+-	Input USER NAME and PASSWORD (same as the administrator account in Web interface default : cyber ; cyber)
+5.	Upload the cpsrm2scfw_XXX.bin , type
+ftp > bin
+ftp > put cpsrm2scfw_XXX.bin
+6.	Upgrade complete , type
+ftp > quit
+7.	The system will reboot after you type 'quit'. This reboot will take approx. 30 seconds. 
+8.	Login to the FTP again
+-	ftp
+-	ftp> open
+-	To [ip] [port] ; EX: To 192.168.22.126 21
+-	Input USER NAME and PASSWORD 
+9.	Upload cpsrm2scdata_XXX.bin
+ftp > bin
+ftp > put cpsrm2scdata_XXX.bin
+10.	Upgrade complete , type
+ftp > quit
+11.	The system will reboot after you type 'quit '
+
+You can check to see if the firmware upgrade was successful by checking the 'Firmware version' on the [System->About] webpage.
+
+Note: Please do not turn the UPS off when processing the Firmware upgrade.
