@@ -1,0 +1,5 @@
+RMCARDX05 (F437) v1.3.1 binary checksum. 
+
+File name			checksum
+cpsrm2scfw_131.bin		0X86C2F21
+cpsrm2scdata_131.bin		0X8883BE6
